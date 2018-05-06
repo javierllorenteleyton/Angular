@@ -1,7 +1,10 @@
 <h1>{{title}}</h1>
-<p>{{ total }}</p>
+
+<div>
 <input [(ngModel)]="valor1" placeholder="valor1">
 <input [(ngModel)]="valor2" placeholder="valor2">
+<p>Total: {{ total }}</p>
+</div>
 <button (click)="suma()">Suma</button>
 <button (click)="resta()">Restar</button>
 <button (click)="multiplicar()">multiplicar</button>
