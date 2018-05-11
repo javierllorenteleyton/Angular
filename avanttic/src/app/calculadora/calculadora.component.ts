@@ -8,29 +8,30 @@ import { Component, OnInit } from '@angular/core';
 export class CalculadoraComponent implements OnInit {
 
   title= 'Calculadora';
-  valor2:number=0;
-  valor1:number=0; 
-  total:number=0;  
+  valor2:number;
+  valor1:number; 
+  total:number;  
 
 
    
 suma():void { 
-    this.total=(this.valor1-0)+(this.valor2-0);
+    this.total=Number(this.valor1)+Number(this.valor2);
  } 
  resta():void { 
-  this.total=this.valor1-this.valor2;
+  this.total=Number(this.valor1)-Number(this.valor2);
 } 
 multiplicar():void { 
-  this.total=this.valor1*this.valor2;
+  this.total=Number(this.valor1)*Number(this.valor2);
 } 
 dividir():void { 
-  this.total=this.valor1/this.valor2;
+  this.total=Number(this.valor1)/Number(this.valor2);
 } 
 
 
   constructor() { }
 
   ngOnInit() {
+    this.total=0;
   }
 
 }
