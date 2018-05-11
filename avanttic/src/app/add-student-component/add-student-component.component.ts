@@ -10,7 +10,7 @@ import { StudentService }    from '../shared/Student.Service';
   styleUrls: ['./add-student-component.component.css']
 })
 export class AddStudentComponentComponent implements OnInit {
-  model = new Student('name', 'lastname','');
+  model = new Student('', '','');
   submitted = false;
   students:Student[];
   active = true;
