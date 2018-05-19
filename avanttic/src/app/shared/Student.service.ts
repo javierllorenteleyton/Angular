@@ -4,12 +4,13 @@ import { Observable,BehaviorSubject} from 'rxjs';
 
 @Injectable()
 export class StudentService{
-    private studentSubject = new BehaviorSubject([]);
+   
     students:Student[] = [
         new Student("Student1", "Student1","12345678"),
         new Student("Student2", "Student2","34567890"),
         new Student("Student3", "Student3","66666655")
     ];
+     private studentSubject = new BehaviorSubject([]);
     constructor(){}
 
     addStudent(student:Student){
@@ -18,6 +19,7 @@ export class StudentService{
     }
 
     getStudents(): Observable<Student[]>{
+
         return this.studentSubject.asObservable();
     }
 }
